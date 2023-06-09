@@ -1,7 +1,7 @@
 
 #header {
     position: absolute;
-    width: 260px;
+    width: 500px;
   }
   /*height: 100% or 100vh or auto;*/
   /*width: 50px;
@@ -27,8 +27,8 @@
   }
 
   #header .pro-sidebar.collapsed {
-    width: 15%;
-    min-width: 15%;
+    width: 8%;
+    min-width: 8%;
     position: relative;
     overflow-x: hidden;
 

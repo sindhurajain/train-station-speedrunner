@@ -88,7 +88,7 @@ const Header = () => {
 
   //fetch trip information 
   const fetchTrip = () => {
-    Axios.get(`https://developers.onemap.sg/privateapi/routingsvc/route?start=${begCor.lat_beg}%2C${begCor.long_beg}&end=${endCor.lat_end}%2C${endCor.long_end}%2C&routeType=pt&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEwMzc1LCJ1c2VyX2lkIjoxMDM3NSwiZW1haWwiOiJwaHlzaWNzbm90ZXN0b3NlbmRAZ21haWwuY29tIiwiZm9yZXZlciI6ZmFsc2UsImlzcyI6Imh0dHA6XC9cL29tMi5kZmUub25lbWFwLnNnXC9hcGlcL3YyXC91c2VyXC9zZXNzaW9uIiwiaWF0IjoxNjg1MzI4MTUyLCJleHAiOjE2ODU3NjAxNTIsIm5iZiI6MTY4NTMyODE1MiwianRpIjoiMDAwMjRlNTA1ZGQwMjgxMzM2ZmU3Nzc5NWIxMDJiMGIifQ.JMuEloyQB2Xv4en5cYFv5Xd01_RmJAQzJ1dh1OsWh-o&date=2023-03-12&time=15%3A30%3A00&mode=RAIL&maxWalkDistance=1000`)
+    Axios.get(`https://developers.onemap.sg/privateapi/routingsvc/route?start=${begCor.lat_beg}%2C${begCor.long_beg}&end=${endCor.lat_end}%2C${endCor.long_end}%2C&routeType=pt&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEwNDI5LCJ1c2VyX2lkIjoxMDQyOSwiZW1haWwiOiJlMDk3MDE5OEB1Lm51cy5lZHUiLCJmb3JldmVyIjpmYWxzZSwiaXNzIjoiaHR0cDpcL1wvb20yLmRmZS5vbmVtYXAuc2dcL2FwaVwvdjJcL3VzZXJcL3Nlc3Npb24iLCJpYXQiOjE2ODYzMzI5MzYsImV4cCI6MTY4Njc2NDkzNiwibmJmIjoxNjg2MzMyOTM2LCJqdGkiOiI2OTg3MTIzMjYwYmYwZmIwNDQyNDNhYjNlZDY2YTYyMSJ9.1-o9KHzOOEvBPM2YF4ILcFzh0sMhW8sjyH1R4KSvu_M&date=2023-03-12&time=15%3A30%3A00&mode=RAIL&maxWalkDistance=1000`)
       .then((res) => {
         var result = [];
         var subway_result = res.data.plan.itineraries[0].legs.filter(x => x.mode === "SUBWAY");
